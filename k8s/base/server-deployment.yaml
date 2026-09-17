@@ -34,8 +34,7 @@ spec:
                   name: mysql-credentials
                   key: MYSQL_PASSWORD
           readinessProbe:
-            httpGet:
-              path: /actuator/health
+            tcpSocket:
               port: 8080
-            initialDelaySeconds: 10
+            initialDelaySeconds: 5
             periodSeconds: 10
