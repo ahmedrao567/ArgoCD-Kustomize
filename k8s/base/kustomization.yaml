@@ -7,11 +7,11 @@ resources:
   - client-service.yaml
 
 images:
-  - name: docker.io/yourname/spring-boot-server
-    newName: docker.io/yourname/spring-boot-server
+  - name: docker.io/ahmedikram567/spring-boot-server
+    newName: docker.io/ahmedikram567/spring-boot-server
     newTag: latest
-  - name: docker.io/yourname/react-client
-    newName: docker.io/yourname/react-client
+  - name: docker.io/ahmedikram567/react-client
+    newName: docker.io/ahmedikram567/react-client
     newTag: latest
 
 commonLabels:

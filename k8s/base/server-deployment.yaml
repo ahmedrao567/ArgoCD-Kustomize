@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-server
-          image: docker.io/yourname/spring-boot-server:latest
+          image: docker.io/ahmedikram567/spring-boot-server:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
