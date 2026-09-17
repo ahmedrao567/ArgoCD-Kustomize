@@ -4,9 +4,9 @@ resources:
   - ../../base
 
 images:
-  - name: docker.io/yourname/spring-boot-server
+  - name: docker.io/ahmedikram567/spring-boot-server
     newTag: prod
-  - name: docker.io/yourname/react-client
+  - name: docker.io/ahmedikram567/react-client
     newTag: prod
 
 patchesStrategicMerge:
