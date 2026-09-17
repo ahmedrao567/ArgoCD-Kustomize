@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-server
+  labels:
+    app: spring-boot-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-server
+  template:
+    metadata:
+      labels:
+        app: spring-boot-server
+    spec:
+      containers:
+        - name: spring-boot-server
+          image: docker.io/yourname/spring-boot-server:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10

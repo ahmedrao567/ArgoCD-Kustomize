@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-client
+  labels:
+    app: react-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-client
+  template:
+    metadata:
+      labels:
+        app: react-client
+    spec:
+      containers:
+        - name: react-client
+          image: docker.io/yourname/react-client:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
