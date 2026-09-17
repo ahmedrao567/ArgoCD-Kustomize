@@ -5,6 +5,9 @@ resources:
   - server-service.yaml
   - client-deployment.yaml
   - client-service.yaml
+  - mysql-secret.yaml
+  - mysql-deployment.yaml
+  - mysql-service.yaml
 
 images:
   - name: docker.io/ahmedikram567/spring-boot-server

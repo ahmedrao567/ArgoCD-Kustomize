@@ -17,7 +17,7 @@ spec:
       containers:
         - name: react-client
           image: docker.io/ahmedikram567/react-client:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           readinessProbe:
